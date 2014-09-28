@@ -1,0 +1,14 @@
+# Site settings
+title: Matthew Ebeweber
+email: mattebeweber@utexas.edu 
+description: > # this means to ignore newlines until "baseurl:"
+    Matthew Ebeweber is a BS/MS Computer Science at UT Austin. He teaches weekly classes
+    for MAD, is a HackTX 2014 organizer and currently does consulting work in the Austin
+    area.
+baseurl:
+url: "http://mattebeweber.com"
+twitter_username: mattebeweber
+github_username:  mattattack
+
+# Build settings
+markdown: kramdown
