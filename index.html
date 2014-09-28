@@ -1,37 +1,51 @@
 <html>
     <head>
-        <title>Ada Lovelace</title>
+        <title>Matthew Ebeweber</title>
 
         <!-- CSS / Javascript Things -->
         <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/typed.js"></script>
+        <script>
+            $(function(){
+                $(".adjective").typed({
+                    strings: ["student", "hacker", "teacher", "creator"],
+                    typeSpeed:70,
+                    backDelay: 3000,
+                    startDelay: 300,
+                    loop: false
+                  });
+              });
+        </script>
         <script type="text/javascript" src="js/set-bg.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
 
-        <meta name="description" content="A description of the page" />
+        <meta name="description" content="Matthew Ebeweber is a student at the University of Texas at Austin studying computer science." />
     </head>
     <body>
         <div class="outside">
             <div class="content">
-                <img class="main-img" src="img/ada.jpg" />
+                <img class="main-img" src="img/matt.jpg" />
 
-                <h1 class="name"><a href="#"><b>Ada</b></a> is a <b>Hacker</b></h1>
+                <h1 class="name"><a href="#"><b>Matt Ebeweber</b></a> is a <b><span class="adjective"></span></b></h1>
                 <h3 class="subtext">
-                    Currently attending 
-                    <a href="http://www.utexas.edu/">UT Austin</a>,
-		    and majoring in
-                    <a href="http://www.cs.utexas.edu/">Computer Science</a>.
-	            More things more things more things. Yadadadadadada.
+                    MS/BS
+                    <a href="http://www.cs.utexas.edu/">Computer Science</a>
+	  	    at
+                    <a href="http://www.utexas.edu/">UT Austin</a>.
+	            Organizing <a href="http://hacktx.org/">HackTX</a>.
+		    Teaching weekly web classes for <a href="http://www.cs.utexas.edu/~mad/">MAD</a>. 
+		    ML work @ <a href="http://bayesconsulting.io/">Bayes Consulting</a>. Let's <a href="mailto:mebeweber+website@gmail.com">chat</a>.
                 </h3>
             </div>
         </div>
 
 
         <div class="footer">
-            <span class="footer-item"><a target="_blank" href="YOUR TWITTER">@yourhandle</a></span>
-            <span class="footer-item"><a target="_blank" href="mailto:your@email.here">your@email.here</a></span>
-            <span class="footer-item"><a target="_blank" href="LINK TO GITHUB">github</a></span>
-            <span class="footer-item"><a target="_blank" href="LINK TO LINKEDIN">linkedin</a></span>
+            <span class="footer-item"><a target="_blank" href="https://twitter.com/mattebeweber">@mattebeweber</a></span>
+            <span class="footer-item"><a target="_blank" href="mailto:mebeweber+website@gmail.com">mebeweber@gmail.com</a></span>
+            <span class="footer-item"><a target="_blank" href="https://github.com/MattAttack">github</a></span>
+            <span class="footer-item"><a target="_blank" href="www.linkedin.com/in/ebeweber/">linkedin</a></span>
         </div>
     </body>
 </html>
