@@ -1,0 +1,62 @@
+<canvas id="genderChart" width="300" height="300"></canvas>
+<script>
+    // Attendance data by session
+    var genderData = [
+        {   // non-binary, other
+            value: 9,
+            color: "#2ecc71",
+            highlight: "#27ae60",
+            label: "Non-Binary, Other",
+            labelColor: "black",
+            labelFontSize: "16",
+        },
+        {   // Female
+            value: 20,
+            color: "#e74c3c",
+            highlight: "#c0392b",
+            label: "Female",
+            labelColor: "black",
+            labelFontSize: "16",
+        },
+        {   // Male
+            value: 95,
+            color: "#3498db",
+            highlight: "#2980b9",
+            label: "Male",
+            labelColor: "black",
+            labelFontSize: "16",
+        },
+    ];
+
+    window.addEventListener("load", function() {
+        // Grab and create the chart
+        var ctx = $("#genderChart").get(0).getContext("2d");
+
+        // Construct the chart
+        var myGenderChart = new Chart(ctx).Pie(genderData, {
+            segmentShowStroke : true,
+            animateScale : true,
+        });
+        $('#genderChart').after(myGenderChart.generateLegend());
+    });
+</script>
+
+<style>
+    .pie-legend li span {
+        background-color: #3498db;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin: -4px 10px;
+        border-radius: 5px;
+    }
+
+    .pie-legend li {
+        margin: 11px 0px;
+    }
+
+    .pie-legend {
+        list-style-type: none;
+        display: inline-block;
+    }
+</style>

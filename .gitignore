@@ -3,6 +3,8 @@ test/dest
 *.gem
 pkg/
 *.swp
+*.swn
+*.swo
 *~
 _site/
 .bundle/

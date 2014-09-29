@@ -1,0 +1,78 @@
+<canvas id="yearChart" width="300" height="300"></canvas>
+<script>
+    // Attendance data by session
+    var yearData = [
+            {   // Freshman
+                value: 53,
+                color:"#1abc9c",
+                highlight: "#16a085",
+                label: "Freshman",
+                labelColor: "black",
+                labelFontSize: "16",
+            },
+            {   // Sophomore
+                value: 28,
+                color: "#f1c40f",
+                highlight: "#f39c12",
+                label: "Sophomore",
+                labelColor: "black",
+                labelFontSize: "16",
+            },
+            {   // Junior
+                value: 25,
+                color: "#e67e22",
+                highlight: "#d35400",
+                label: "Junior",
+                labelColor: "black",
+                labelFontSize: "16",
+        },
+            {   // Senior
+                value: 8,
+                color: "#e74c3c",
+                highlight: "#c0392b",
+                label: "Senior",
+                labelColor: "black",
+                labelFontSize: "16",
+            },
+            {   // Other
+                value: 10,
+                color: "#34495e",
+                highlight: "#2c3e50",
+                label: "Other",
+                labelColor: "black",
+                labelFontSize: "16",
+            }
+    ];
+
+    window.addEventListener("load", function () {
+        // Grab and create the chart
+        var ctx = $("#yearChart").get(0).getContext("2d");
+
+        // Construct the chart
+        var myAttendanceChart = new Chart(ctx).Pie(yearData, {
+            segmentShowStroke : true,
+            animateScale : true,
+        });
+        $('#yearChart').after(myAttendanceChart.generateLegend());
+    });
+</script>
+
+<style>
+    .pie-legend li span {
+        background-color: #3498db;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin: -4px 10px;
+        border-radius: 5px;
+    }
+
+    .pie-legend li {
+        margin: 11px 0px;
+    }
+
+    .pie-legend {
+        list-style-type: none;
+        display: inline-block;
+    }
+</style>
