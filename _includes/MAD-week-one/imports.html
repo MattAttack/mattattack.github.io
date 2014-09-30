@@ -1,2 +1,14 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="../../../../../js/Chart.js"></script>
+<script>
+    function isScrolledIntoView(elem)
+        {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+
+            var elemTop = $(elem).offset().top;
+            var elemBottom = elemTop + $(elem).height();
+
+            return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+        }
+</script>

@@ -44,16 +44,18 @@
             }
     ];
 
-    window.addEventListener("load", function () {
-        // Grab and create the chart
-        var ctx = $("#yearChart").get(0).getContext("2d");
-
-        // Construct the chart
-        var myAttendanceChart = new Chart(ctx).Pie(yearData, {
-            segmentShowStroke : true,
-            animateScale : true,
-        });
-        $('#yearChart').after(myAttendanceChart.generateLegend());
+    var mbInView = false;
+    window.addEventListener("scroll", function () {
+        if (mbInView) { return; }
+        if (isScrolledIntoView("#yearChart")) {
+            mbInView = true;
+            var ctx = $("#yearChart").get(0).getContext("2d");
+            var yearChart = new Chart(ctx).Pie(yearData, {
+                segmentShowStroke : true,
+                animateScale : true,
+            });
+            $('#yearChart').after(yearChart.generateLegend());
+        }
     });
 </script>
 

@@ -28,16 +28,18 @@
         },
     ];
 
-    window.addEventListener("load", function() {
-        // Grab and create the chart
-        var ctx = $("#genderChart").get(0).getContext("2d");
-
-        // Construct the chart
-        var myGenderChart = new Chart(ctx).Pie(genderData, {
-            segmentShowStroke : true,
-            animateScale : true,
-        });
-        $('#genderChart').after(myGenderChart.generateLegend());
+    var genderInView = false;
+    window.addEventListener("scroll", function () {
+        if (genderInView) { return; }
+        if (isScrolledIntoView("#genderChart")) {
+            genderInView = true;
+            var ctx = $("#genderChart").get(0).getContext("2d");
+            var myGenderChart = new Chart(ctx).Pie(genderData, {
+                segmentShowStroke : true,
+                animateScale : true,
+            });
+            $('#genderChart').after(myGenderChart.generateLegend());
+        }
     });
 </script>
 
