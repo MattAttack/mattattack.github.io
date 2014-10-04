@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "MAD Week One Breakdown"
+title:  "[WIP] MAD Week One Breakdown"
 date:   2014-10-01 17:13:21
 categories: MAD demographics
 ---
@@ -45,8 +45,8 @@ In Conclusion
 -------------
 Overall it was one hell of a week for MAD. While not where we would like to be, we are leaps and bounds ahead of where we were last year and continuing to push to be an inclusive and welcoming learning environment.
 
-Pictures
---------
+Pictures & Media
+----------------
 
 ![Web Development](http://i.imgur.com/4XBEF0J.jpg "Web Development")
 
