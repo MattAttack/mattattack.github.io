@@ -7,24 +7,24 @@
             color: "#2ecc71",
             highlight: "#27ae60",
             label: "Non-Binary, Other",
-            labelColor: "black",
-            labelFontSize: "16",
+            labelColor : 'black',
+            labelFontSize : '16'
         },
         {   // Female
             value: 20,
             color: "#e74c3c",
             highlight: "#c0392b",
             label: "Female",
-            labelColor: "black",
-            labelFontSize: "16",
+            labelColor : 'black',
+            labelFontSize : '16'
         },
         {   // Male
             value: 95,
             color: "#3498db",
             highlight: "#2980b9",
             label: "Male",
-            labelColor: "black",
-            labelFontSize: "16",
+            labelColor : 'black',
+            labelFontSize : '16'
         },
     ];
 
@@ -36,7 +36,7 @@
             var ctx = $("#genderChart").get(0).getContext("2d");
             var myGenderChart = new Chart(ctx).Pie(genderData, {
                 segmentShowStroke : true,
-                animateScale : true,
+                animateScale : true
             });
             $('#genderChart').after(myGenderChart.generateLegend());
         }
