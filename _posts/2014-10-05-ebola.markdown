@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Ebola Visualized"
+date:   2014-10-05 17:13:21
+categories: ebola visualization
+published: false
+---
+
+The following is a visualization of the 2014 Global Ebola Outbreak over time. The data used for this can be found here: [https://github.com/cmrivers/ebola](https://github.com/cmrivers/ebola).
+
+{% include Ebola/imports.html %}
+{% include Ebola/visualization.html %}
+
+

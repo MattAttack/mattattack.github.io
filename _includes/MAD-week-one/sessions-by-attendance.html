@@ -45,7 +45,7 @@
 	];
 
     var sbaInView = false;
-    window.addEventListener("scroll", function () {
+    var loadSBA = function() {
         if (sbaInView) { return; }
         if (isScrolledIntoView("#attendanceChart")) {
             sbaInView = true;
@@ -56,7 +56,8 @@
             });
             $('#attendanceChart').after(myAttendanceChart.generateLegend());
         }
-    });
+    };
+    window.addEventListener("scroll", loadSBA);
 </script>
 
 <style>

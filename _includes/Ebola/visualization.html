@@ -1,5 +1,7 @@
-<canvas id="sessionsByGenderChart" width="800px" height="400"></canvas>
+<canvas id="ebolaBarChart" width="800px" height="400"></canvas>
+
 <script>
+    debugger;
     // Attendance data by session
     var sessionsByGenderData = {
         labels: ["Web Dev", "Beginner Android", "Advanced Android",
@@ -25,13 +27,12 @@
     };
 
     var breakdownInView = false;
-    var loadGBS = function() {
+    window.addEventListener("scroll", function () {
         if (breakdownInView) { return; }
         if (isScrolledIntoView("#sessionsByGenderChart")) {
             breakdownInView = true;
             var ctx = $("#sessionsByGenderChart").get(0).getContext("2d");
             var myAttendanceChart = new Chart(ctx).Bar(sessionsByGenderData, {});
         }
-    };
-    window.addEventListener("scroll", loadGBS);
+    });
 </script>
