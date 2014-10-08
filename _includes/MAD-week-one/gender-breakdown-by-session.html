@@ -31,7 +31,30 @@
             breakdownInView = true;
             var ctx = $("#sessionsByGenderChart").get(0).getContext("2d");
             var myAttendanceChart = new Chart(ctx).Bar(sessionsByGenderData, {});
+
+            $('#sessionsByGenderChart').after(myAttendanceChart.generateLegend());
         }
     };
     window.addEventListener("scroll", loadGBS);
 </script>
+
+<style>
+    .bar-legend li span {
+        background-color: #3498db;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin: -4px 10px;
+        border-radius: 5px;
+    }
+
+    .bar-legend li {
+        margin: 11px 0px;
+        float: left;
+    }
+
+    .bar-legend {
+        list-style-type: none;
+        display: inline-block;
+    }
+</style>
