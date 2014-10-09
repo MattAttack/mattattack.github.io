@@ -1,4 +1,4 @@
-<canvas id="sessionsByGenderChart" width="800px" height="400"></canvas>
+<canvas id="sessionsByGenderChart"></canvas>
 <script>
     // Attendance data by session
     var sessionsByGenderData = {
@@ -30,12 +30,15 @@
         if (isScrolledIntoView("#sessionsByGenderChart")) {
             breakdownInView = true;
             var ctx = $("#sessionsByGenderChart").get(0).getContext("2d");
-            var myAttendanceChart = new Chart(ctx).Bar(sessionsByGenderData, {});
+            var myAttendanceChart = new Chart(ctx).Bar(sessionsByGenderData, {
+                responsive: true,
+            });
 
             $('#sessionsByGenderChart').after(myAttendanceChart.generateLegend());
         }
     };
     window.addEventListener("scroll", loadGBS);
+    loadGBS();
 </script>
 
 <style>
@@ -56,5 +59,10 @@
     .bar-legend {
         list-style-type: none;
         display: inline-block;
+    }
+
+    #sessionsByGenderChart {
+        width: 100% !important;
+        height: 400px;
     }
 </style>
