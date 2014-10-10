@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ebola Visualized"
-date:   2014-10-05 17:13:21
+date:   2014-10-10 17:13:21
 categories: ebola visualization
 ---
 
