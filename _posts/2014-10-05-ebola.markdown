@@ -13,4 +13,4 @@ This is a visualization of the counts of Ebola deaths and cases in 5 countries f
 {% include Ebola/imports.html %}
 {% include Ebola/visualization.html %}
 
-Tell me what you think on [Twitter](https://twitter.com/mattebeweber).
+Tell me what you think on [Twitter](https://twitter.com/mattebeweber) or at [hey@mattebeweber.com](mailto:hey@mattebeweber.com).
