@@ -32,6 +32,7 @@
             var ctx = $("#sessionsByGenderChart").get(0).getContext("2d");
             var myAttendanceChart = new Chart(ctx).Bar(sessionsByGenderData, {
                 responsive: true,
+                // maintainAspectRatio: false
             });
 
             $('#sessionsByGenderChart').after(myAttendanceChart.generateLegend());
@@ -59,5 +60,10 @@
     .bar-legend {
         list-style-type: none;
         display: inline-block;
+    }
+
+    #sessionsByGenderChart {
+        height: 400px !important;
+        width: 100% !important;
     }
 </style>

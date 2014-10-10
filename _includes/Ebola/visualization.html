@@ -1,7 +1,31 @@
 <canvas id="ebolaChart" width="800px" height="400"></canvas>
 
 <script>
-    data = [ { Date: '9/21/2014',
+    data = [ { Date: '9/28/2014',
+    Day: '190',
+    Cases_Guinea: '1157',
+    Cases_Liberia: '3696',
+    Cases_SierraLeone: '2304',
+    Cases_Nigeria: '20',
+    Case_Senegal: '1',
+    Deaths_Guinea: '710',
+    Deaths_Liberia: '1998',
+    Deaths_SierraLeone: '622',
+    Deaths_Nigeria: '8',
+    Deaths_Senegal: '0' },
+  { Date: '9/23/2014',
+    Day: '185',
+    Cases_Guinea: '1074',
+    Cases_Liberia: '3458',
+    Cases_SierraLeone: '2021',
+    Cases_Nigeria: '20',
+    Case_Senegal: '1',
+    Deaths_Guinea: '648',
+    Deaths_Liberia: '1830',
+    Deaths_SierraLeone: '605',
+    Deaths_Nigeria: '8',
+    Deaths_Senegal: '0' },
+  { Date: '9/21/2014',
     Day: '183',
     Cases_Guinea: '1022',
     Cases_Liberia: '3280',
@@ -891,6 +915,8 @@
     Deaths_Senegal: '' } ]
 
     var labels = ["Guinea", "Liberia", "SierraLeone", "Nigeria", "Senegal"];
+
+    // Custom parse int for the data
     var parseIntValue = function(str) {
         if (str === '') {
             return 0;
@@ -898,11 +924,14 @@
             return parseInt(str);
         }
     };
+    // Sets the date object for the visualization
     var setDate = function(data_obj) {
         $('.day-ticker').text(
             "Day " + data_obj.Day + ": " + data_obj.Date
         );
     };
+
+    // Grabs the data for a specific date
     var getData = function(date_obj) {
         return {
             labels: labels,
@@ -940,25 +969,51 @@
     }
     // Create the initial graph
     var ctx = $("#ebolaChart").get(0).getContext("2d");
-    var ebolaChart = new Chart(ctx).Bar(getData(data[0]), {});
+    var ebolaChart = new Chart(ctx).Bar(getData(data[0]), {
+        scaleOverride: true,
+        scaleSteps: 16,
+        scaleStartValue: 0,
+        scaleStepWidth: 250,
+        responsive: true
+    });
 
     $('#ebolaChart').after(ebolaChart.generateLegend());
     $('#ebolaChart').before('<div class="day-ticker"></div>')
     setDate(data[0])
 
     var idx = 0;
+    var delay = 0;
     setInterval(
         function() {
             if (idx == data.length) { idx = 0; }
-            setDate(data[data.length - (idx + 1)]);
-            debugger;
-            ebolaChart.datasets = getData(data[data.length - (idx + 1)]).datasets;
+
+            // Hacky way to add a delay
+            if (idx == 0 && delay < 10) {
+                delay++;
+                return;
+            } else if (idx == 0) {
+                delay = 0;
+            }
+
+            var new_datasets = getData(data[data.length - (idx + 1)]).datasets;
+
+            for (var i = 0; i < new_datasets.length; i++) {
+                for (var j = 0; j < new_datasets[i].data.length; j++) {
+                    var update_value = new_datasets[i].data[j];
+                    if (update_value != 0 || idx == 0) {
+                        ebolaChart.datasets[i].bars[j].value = update_value;
+                    }
+                }
+            }
             ebolaChart.update();
+            setDate(data[data.length - (idx + 1)]);
 
             idx = idx + 1;
         },
-        2000
+        250
     );
+
+
 </script>
 
 <style>

@@ -3,12 +3,14 @@ layout: post
 title:  "Ebola Visualized"
 date:   2014-10-05 17:13:21
 categories: ebola visualization
-published: false
 ---
 
-The following is a visualization of the 2014 Global Ebola Outbreak over time. The data used for this can be found here: [https://github.com/cmrivers/ebola](https://github.com/cmrivers/ebola).
++ Experimenting with [Chart.js](http://www.chartjs.org/).
++ Data can be found on [GitHub](https://github.com/cmrivers/ebola/blob/master/country_timeseries.json).
+
+This is a visualization of the counts of Ebola deaths and cases in 5 countries from 3/22/2014 - 9/28/2014. You can watch the counts slowly grow and then take off around day 150. I hope to find more data and build out a more detailed visualization (perhaps with a map?).
 
 {% include Ebola/imports.html %}
 {% include Ebola/visualization.html %}
 
-
+Tell me what you think on [Twitter](https://twitter.com/mattebeweber).
