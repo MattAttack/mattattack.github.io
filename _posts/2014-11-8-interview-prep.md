@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Interviewing: Tips, Resources & Questions to Know"
-date:   2014-11-27 17:13:21
+date:   2014-11-08 17:13:21
 categories: interviews
 published: True
 ---
