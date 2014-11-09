@@ -82,14 +82,8 @@ def duplicates(A):
 
 ```python
 def anagrams(s1, s2):
-    """Detects whether two strings are anagrams.
-
-    :type s1: string
-    :param s1: the first string
-    :type s2: string
-    :param s2: the first string
-    :rtype: bool
-    :returns: whether or not the two strings are anagrams
+    """Detects whether two strings are anagrams. Does so by sorting the
+    characters in each string and comparing.
     """
     return "".join(sorted(s1)) == "".join(sorted(s2))
 ```
@@ -98,14 +92,9 @@ def anagrams(s1, s2):
 
 ```python
 def anagrams(s1, s2):
-    """Detects whether two strings are anagrams in O(n) time using a set
-
-    :type s1: string
-    :param s1: the first string
-    :type s2: string
-    :param s2: the first string
-    :rtype: bool
-    :returns: whether or not the two strings are anagrams
+    """Detects whether two strings are anagrams in O(n) time using a map of
+    the counts from each string. Increments over the first string and then
+    decrements over the second.
     """
     # chr -> count mapping
     letter_counts = dict()
