@@ -6,7 +6,7 @@ categories: interviews
 published: True
 ---
 
-**This post is a work in progress**
+**This post is a work in progress and is currently being with suggestions.**
 
 Resources
 ---------
@@ -24,16 +24,16 @@ Tips
 ----
 
 + Think out loud and through a solution before writing it
-+ Write the naive solution first. Then think of how to optimize.
-+ Understand time and space tradeoffs.
-+ If you've heard a question before, tell your interviewer.
++ Start with the naive solution, then optimize
++ Understand time and space tradeoffs
++ If you've heard a question before, tell your interviewer
 + Write test cases / Think of edge cases
 
 
 5 Common Questions
 -----------------
 
-Here are 5 general questions that test different concepts. A lot of companies use these questions.
+Here are 5 general questions that test different concepts. A lot of different places use variations of these questions. When practicing for interviews these are a couple of the questions I quickly go through to prepare myself. I've covered a common question from the following different structures: sets, maps, trees, linkedlist and stack.
 
 **Sets:** Duplicates in an Array
 ======================
@@ -197,7 +197,7 @@ def min_and_max_depth(node):
 
 <br>
 
-**Linkedlist:** Reverse a LinkedList
+**LinkedList:** Reverse a LinkedList
 ================================
 
 **Implementation:**
@@ -282,3 +282,8 @@ def balanced(s):
     return len(stack) == 0
 
 ```
+
+Remarks
+-------
+
+I hope you found this useful. If you have any questions or thoughts you can contact me at [hey@mattebeweber.com](mailto:hey@mattebeweber.com) or on [Twitter](https://twitter.com/mattebeweber).
