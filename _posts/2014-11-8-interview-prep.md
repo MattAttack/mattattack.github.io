@@ -137,19 +137,23 @@ def anagrams(s1, s2):
 **Trees & Recursion:** Min and Max Depth
 ========================================
 
-**Problem:** Implement a function called is_balanced to check if a tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that no two leaf nodes differ in distance from the root by more than one.
-
-**Solution:**
+**Node Implementation:**
 
 ```python
 class Node(object):
     """A very basic implementation of a binary tree node"""
 
-    def __init__(self, right=None, left=None):
+    def __init__(self, right=None, left=None, value=None):
         self.right = right
         self.left = left
+        self.value = value
+```
 
+**Problem:** Implement a function called is_balanced to check if a tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that no two leaf nodes differ in distance from the root by more than one.
 
+**Solution:**
+
+```python
 def is_balanced(root):
     """Takes a tree (root node) and returns whether or not that tree
     is balanced
@@ -190,9 +194,59 @@ def min_and_max_depth(node):
 
 <br>
 
-Linkedlist: Reverse a Linkedlist
+Linkedlist: Reverse a LinkedList
 ================================
 
-**Problem: **
+**Implementation:**
+
+```python
+class Node(object):
+    """A very basic implementation of a binary tree node"""
+
+    def __init__(self, value=None, next=None):
+        self.value = value
+        self.next = next
+```
+
+**Problem:** Given the head of a LinkedList reverse it.
+
+**Iterative Solution:**
+
+```python
+def reverse(n):
+    """Reverses a LinkedList iteratively"""
+    last = None
+    current = n
+
+    while current:
+        # Grad the next node and make the current node
+        # point backwards
+        next = current.next
+        current.next = last
+
+        # Move forward
+        last = current
+        current = next
+
+    # Return the new head (the last node)
+    return last
+```
+
+**Recursive Solution:**
+
+```python
+def reverse(n, last=None):
+    """Reverses a LinkedList recursively"""
+    # Hit the end, return the last node
+    if not n:
+        return last
+
+    # Grab the next node and reverse the pointer
+    next = n.next
+    n.next = last
+
+    return reverse(next, n)
+```
+
 
 
