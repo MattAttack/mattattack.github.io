@@ -6,6 +6,8 @@ categories: interviews
 published: True
 ---
 
+**This post is a work in progress**
+
 Resources
 ---------
 
@@ -25,6 +27,7 @@ Tips
 + Write the naive solution first. Then think of how to optimize.
 + Understand time and space tradeoffs.
 + If you've heard a question before, tell your interviewer.
++ Write test cases / Think of edge cases
 
 
 5 Common Questions
@@ -194,7 +197,7 @@ def min_and_max_depth(node):
 
 <br>
 
-Linkedlist: Reverse a LinkedList
+**Linkedlist:** Reverse a LinkedList
 ================================
 
 **Implementation:**
@@ -248,5 +251,34 @@ def reverse(n, last=None):
     return reverse(next, n)
 ```
 
+<br>
 
+* * *
 
+<br>
+
+**Stack:** Balanced Parentheses
+===========================
+
+**Problem:** Given a string expression, write a program to determine if the parenthesis are correct or invalid / not balanced. For example, "(()())" is correct while "(()" is not.
+
+**Solution:**
+
+```python
+def balanced(s):
+    """Returns true if parentheses are balanced. False otherwise."""
+    stack = list()
+
+    for ch in s:
+        # Push opening onto stack
+        if ch == '(':
+            stack.append(')')
+        # If closing make sure you encountered an opening
+        elif ch == ')':
+            if len(stack) == 0: return False
+            elif stack.pop() != ')': return False
+
+    # Make sure no extra
+    return len(stack) == 0
+
+```
