@@ -3,6 +3,7 @@ layout: post
 title:  "Ebola Visualized"
 date:   2014-10-10 17:13:21
 categories: ebola visualization
+comments: True
 ---
 
 + Experimenting with [Chart.js](http://www.chartjs.org/).
@@ -14,3 +15,5 @@ This is a visualization of the counts of Ebola deaths and cases in 5 countries f
 {% include Ebola/visualization.html %}
 
 Tell me what you think on [Twitter](https://twitter.com/mattebeweber) or at [hey@mattebeweber.com](mailto:hey@mattebeweber.com).
+
+{% include comments.html %}
