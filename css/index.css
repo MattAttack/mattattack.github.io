@@ -6,6 +6,13 @@ html, body {
     margin: 0px;
 }
 
+div#particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
 div.outside {
     display: table;
     width: 100%;

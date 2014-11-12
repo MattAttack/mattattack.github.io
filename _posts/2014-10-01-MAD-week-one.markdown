@@ -61,4 +61,4 @@ Additional Notes
 + MAD is actively looking for companies to partner with. Supporters of MAD have access to some of the top talent at UT through our weekly sessions, hack nights, and uMAD (our annual developers conference). For more information, shoot me an email at [email](mailto:hey@mattebeweber.com).
 + Follow me at [@mattebeweber](https://twitter.com/mattebeweber).
 
-{% include comments.html %}
+
