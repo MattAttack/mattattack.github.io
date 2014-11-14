@@ -3,15 +3,15 @@ particlesJS('particles-js', {
         color: '#fff',
         shape: 'circle',
         opacity: .5,
-        size: 2.5,
-        size_random: true,
+        size: 10,
+        size_random: false,
         nb: 100,
         line_linked: {
             enable_auto: true,
             distance: 250,
             color: '#fff',
-            opacity: 0.4,
-            width: 1,
+            opacity: 0.5,
+            width: 5,
             condensed_mode: {
                 enable: false,
                 rotateX: 600,
@@ -24,7 +24,7 @@ particlesJS('particles-js', {
         }
     },
     interactivity: {
-        enable: true,
+        enable: false,
         mouse: {
             distance: 200
         },

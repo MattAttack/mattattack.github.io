@@ -1,0 +1,12 @@
+layout: post
+title:  "Rejection"
+date:   2014-11-08 17:13:21
+categories: interviews
+published: False
+comments: False
+--------------------
+
+I believe it's important to reflect on successes and failures over time. This is just a list of different things. When I have a rough time or am facing something, I look back at this list and remember how awful I thought it was at the time.
+
++ 2013: After 3 interviewers with Khan Academy, my number one choice for my junior internship I am rejected after interviewing with someone working full time at Khan Academy a year younger than me.
++ 2014: After onsite Google APM interviews, I am called and rejected.
