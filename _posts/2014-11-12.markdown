@@ -1,12 +1,13 @@
 layout: post
 title:  "Rejection"
 date:   2014-11-08 17:13:21
-categories: interviews
+categories: rejection
 published: False
 comments: False
 --------------------
 
 I believe it's important to reflect on successes and failures over time. This is just a list of different things. When I have a rough time or am facing something, I look back at this list and remember how awful I thought it was at the time.
 
-+ 2013: After 3 interviewers with Khan Academy, my number one choice for my junior internship I am rejected after interviewing with someone working full time at Khan Academy a year younger than me.
-+ 2014: After onsite Google APM interviews, I am called and rejected.
++ Fall 2013: After 3 interviewers with Khan Academy, my number one choice for my junior internship I am rejected after interviewing with someone working full time at Khan Academy a year younger than me.
++ Winter 2013: I had planned to graduate early and apply for the Master's program at UT. After taking the GRE, getting letters of recommendation and completing the entire application I missed the deadline by one day. There was 2 separate applications (one for the school and one for the department) and I only filled out one of them.
++ 2014: After several interviews (inluding onsite interviews), I am called and rejected from Google's APM program.
